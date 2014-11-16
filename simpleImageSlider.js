@@ -1,9 +1,11 @@
-imagearray1 = [] //array to store references of the different images
-var i =0;// update counter
+var imagearray1 = ["images/litsection.jpg","images/busstand.jpg"]// array to store image references
+var len1 = imagearray1.length;
+var i =0;//increment counter
 
 window.onload = function(){
-	setTimeout(function(){
-	document.getElementById('bench').setAttribute('src',imagearray1[i]); //copy paste this line for any numner of sliders within sampage, change the id and imagearray in each
+	setInterval(function(){
+	document.getElementById('bench').setAttribute('src',imagearray1[i]);
+	i = (i+1)%len1;
+	},2500); 
 
-	},2000); //set your time
 }
